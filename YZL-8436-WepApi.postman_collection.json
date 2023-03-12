@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "4588466e-6cbc-4474-accc-56b211069481",
+		"name": "YZL-8436-WepApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					},
+					{
+						"key": "kullanici",
+						"value": "admin",
+						"type": "default"
+					},
+					{
+						"key": "sifre",
+						"value": "123",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7190/deneme/isimler3?id=2&adi=ahmet",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"deneme",
+						"isimler3"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "adi",
+							"value": "ahmet"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kaydet",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"adi\":\"Ahmet\",\r\n    \"tckn\":\"12355765687\",\r\n    \"yas\": 65\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7190/deneme/kaydet",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"deneme",
+						"kaydet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kaydet-form",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "adi",
+							"value": "Ahmet",
+							"type": "default"
+						},
+						{
+							"key": "tckn",
+							"value": "123214234",
+							"type": "default"
+						},
+						{
+							"key": "yas",
+							"value": "45",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7190/deneme/kaydet2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"deneme",
+						"kaydet2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "yemeklerigetir",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "kullanici",
+						"value": "admin",
+						"type": "default"
+					},
+					{
+						"key": "sifre",
+						"value": "1234",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7190/deneme/yemeklerigetir",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"deneme",
+						"yemeklerigetir"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
